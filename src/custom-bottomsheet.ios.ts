@@ -1,5 +1,13 @@
-import { Common } from './custom-bottomsheet.common';
 
-export class CustomBottomsheet extends Common {
+
+export class CustomBottomsheet {
+
+    constructor() {
+
+    }
+
+    public show(): void {
+
+    }
 
 }

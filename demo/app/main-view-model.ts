@@ -1,5 +1,6 @@
 import { Observable } from 'tns-core-modules/data/observable';
 import { CustomBottomsheet } from 'nativescript-custom-bottomsheet';
+import { CBSheetOption } from '../../src/custom-bottomsheet.common';
 
 export class HelloWorldModel extends Observable {
   public message: string;
@@ -9,6 +10,33 @@ export class HelloWorldModel extends Observable {
     super();
 
     this.customBottomsheet = new CustomBottomsheet();
-    this.message = this.customBottomsheet.message;
+  }
+
+  public onTap(): void {
+
+    const options: CBSheetOption = {
+      icon: 'icon',
+      title: 'Test',
+      items: [{
+        icon: 'icon',
+        title: 'test-list'
+      },
+      {
+        icon: 'icon',
+        title: 'test-list'
+      },
+      {
+        icon: 'icon',
+        title: 'test-list'
+      }
+      ],
+      onItemTap: (index, item) => {
+        console.log('index', index);
+      }
+    };
+
+    this.customBottomsheet.show(options);
+
+    console.log('sssss');
   }
 }
