@@ -17,17 +17,17 @@ declare class LCActionSheet extends UIView {
 
 	static new(): LCActionSheet; // inherited from NSObject
 
-	static sheetWithTitleCancelButtonTitleClickedOtherButtonTitleArray(title: string, cancelButtonTitle: string, clickedHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitleArray: NSArray<string> | string[]): LCActionSheet;
+	static sheetWithTitleMainIconIconArrayCancelButtonTitleClickedOtherButtonTitleArray(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], cancelButtonTitle: string, clickedHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitleArray: NSArray<string> | string[]): LCActionSheet;
 
-	static sheetWithTitleCancelButtonTitleClickedOtherButtonTitles(title: string, cancelButtonTitle: string, clickedHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitles: string): LCActionSheet;
+	static sheetWithTitleMainIconIconArrayCancelButtonTitleClickedOtherButtonTitles(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], cancelButtonTitle: string, clickedHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitles: string): LCActionSheet;
 
-	static sheetWithTitleCancelButtonTitleDidDismissOtherButtonTitleArray(title: string, cancelButtonTitle: string, didDismissHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitleArray: NSArray<string> | string[]): LCActionSheet;
+	static sheetWithTitleMainIconIconArrayCancelButtonTitleDidDismissOtherButtonTitleArray(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], cancelButtonTitle: string, didDismissHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitleArray: NSArray<string> | string[]): LCActionSheet;
 
-	static sheetWithTitleCancelButtonTitleDidDismissOtherButtonTitles(title: string, cancelButtonTitle: string, didDismissHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitles: string): LCActionSheet;
+	static sheetWithTitleMainIconIconArrayCancelButtonTitleDidDismissOtherButtonTitles(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], cancelButtonTitle: string, didDismissHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitles: string): LCActionSheet;
 
-	static sheetWithTitleDelegateCancelButtonTitleOtherButtonTitleArray(title: string, delegate: LCActionSheetDelegate, cancelButtonTitle: string, otherButtonTitleArray: NSArray<string> | string[]): LCActionSheet;
+	static sheetWithTitleMainIconIconArrayDelegateCancelButtonTitleOtherButtonTitleArray(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], delegate: LCActionSheetDelegate, cancelButtonTitle: string, otherButtonTitleArray: NSArray<string> | string[]): LCActionSheet;
 
-	static sheetWithTitleDelegateCancelButtonTitleOtherButtonTitles(title: string, delegate: LCActionSheetDelegate, cancelButtonTitle: string, otherButtonTitles: string): LCActionSheet;
+	static sheetWithTitleMainIconIconArrayDelegateCancelButtonTitleOtherButtonTitles(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], delegate: LCActionSheetDelegate, cancelButtonTitle: string, otherButtonTitles: string): LCActionSheet;
 
 	animationDuration: number;
 
@@ -75,6 +75,10 @@ declare class LCActionSheet extends UIView {
 
 	didPresentHandler: (p1: LCActionSheet) => void;
 
+	disableAutoDismissAfterClicking: boolean;
+
+	mainIcon: UIImage;
+
 	numberOfTitleLines: number;
 
 	redButtonIndexSet: NSIndexSet;
@@ -99,17 +103,17 @@ declare class LCActionSheet extends UIView {
 
 	willPresentHandler: (p1: LCActionSheet) => void;
 
-	constructor(o: { title: string; cancelButtonTitle: string; clicked: (p1: LCActionSheet, p2: number) => void; otherButtonTitleArray: NSArray<string> | string[]; });
+	constructor(o: { title: string; mainIcon: UIImage; iconArray: NSArray<string> | string[]; cancelButtonTitle: string; clicked: (p1: LCActionSheet, p2: number) => void; otherButtonTitleArray: NSArray<string> | string[]; });
 
-	constructor(o: { title: string; cancelButtonTitle: string; clicked: (p1: LCActionSheet, p2: number) => void; otherButtonTitles: string; });
+	constructor(o: { title: string; mainIcon: UIImage; iconArray: NSArray<string> | string[]; cancelButtonTitle: string; clicked: (p1: LCActionSheet, p2: number) => void; otherButtonTitles: string; });
 
-	constructor(o: { title: string; cancelButtonTitle: string; didDismiss: (p1: LCActionSheet, p2: number) => void; otherButtonTitleArray: NSArray<string> | string[]; });
+	constructor(o: { title: string; mainIcon: UIImage; iconArray: NSArray<string> | string[]; cancelButtonTitle: string; didDismiss: (p1: LCActionSheet, p2: number) => void; otherButtonTitleArray: NSArray<string> | string[]; });
 
-	constructor(o: { title: string; cancelButtonTitle: string; didDismiss: (p1: LCActionSheet, p2: number) => void; otherButtonTitles: string; });
+	constructor(o: { title: string; mainIcon: UIImage; iconArray: NSArray<string> | string[]; cancelButtonTitle: string; didDismiss: (p1: LCActionSheet, p2: number) => void; otherButtonTitles: string; });
 
-	constructor(o: { title: string; delegate: LCActionSheetDelegate; cancelButtonTitle: string; otherButtonTitleArray: NSArray<string> | string[]; });
+	constructor(o: { title: string; mainIcon: UIImage; iconArray: NSArray<string> | string[]; delegate: LCActionSheetDelegate; cancelButtonTitle: string; otherButtonTitleArray: NSArray<string> | string[]; });
 
-	constructor(o: { title: string; delegate: LCActionSheetDelegate; cancelButtonTitle: string; otherButtonTitles: string; });
+	constructor(o: { title: string; mainIcon: UIImage; iconArray: NSArray<string> | string[]; delegate: LCActionSheetDelegate; cancelButtonTitle: string; otherButtonTitles: string; });
 
 	appendButtonWithTitleAtIndex(title: string, index: number): void;
 
@@ -119,17 +123,19 @@ declare class LCActionSheet extends UIView {
 
 	buttonTitleAtIndex(index: number): string;
 
-	initWithTitleCancelButtonTitleClickedOtherButtonTitleArray(title: string, cancelButtonTitle: string, clickedHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitleArray: NSArray<string> | string[]): this;
+	initWithTitleMainIconIconArrayCancelButtonTitleClickedOtherButtonTitleArray(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], cancelButtonTitle: string, clickedHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitleArray: NSArray<string> | string[]): this;
 
-	initWithTitleCancelButtonTitleClickedOtherButtonTitles(title: string, cancelButtonTitle: string, clickedHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitles: string): this;
+	initWithTitleMainIconIconArrayCancelButtonTitleClickedOtherButtonTitles(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], cancelButtonTitle: string, clickedHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitles: string): this;
 
-	initWithTitleCancelButtonTitleDidDismissOtherButtonTitleArray(title: string, cancelButtonTitle: string, didDismissHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitleArray: NSArray<string> | string[]): this;
+	initWithTitleMainIconIconArrayCancelButtonTitleDidDismissOtherButtonTitleArray(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], cancelButtonTitle: string, didDismissHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitleArray: NSArray<string> | string[]): this;
 
-	initWithTitleCancelButtonTitleDidDismissOtherButtonTitles(title: string, cancelButtonTitle: string, didDismissHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitles: string): this;
+	initWithTitleMainIconIconArrayCancelButtonTitleDidDismissOtherButtonTitles(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], cancelButtonTitle: string, didDismissHandler: (p1: LCActionSheet, p2: number) => void, otherButtonTitles: string): this;
 
-	initWithTitleDelegateCancelButtonTitleOtherButtonTitleArray(title: string, delegate: LCActionSheetDelegate, cancelButtonTitle: string, otherButtonTitleArray: NSArray<string> | string[]): this;
+	initWithTitleMainIconIconArrayDelegateCancelButtonTitleOtherButtonTitleArray(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], delegate: LCActionSheetDelegate, cancelButtonTitle: string, otherButtonTitleArray: NSArray<string> | string[]): this;
 
-	initWithTitleDelegateCancelButtonTitleOtherButtonTitles(title: string, delegate: LCActionSheetDelegate, cancelButtonTitle: string, otherButtonTitles: string): this;
+	initWithTitleMainIconIconArrayDelegateCancelButtonTitleOtherButtonTitles(title: string, mainIcon: UIImage, iconArray: NSArray<string> | string[], delegate: LCActionSheetDelegate, cancelButtonTitle: string, otherButtonTitles: string): this;
+
+	setButtonTitleAtIndex(title: string, index: number): void;
 
 	show(): void;
 }
@@ -155,6 +161,8 @@ declare class LCActionSheetCell extends UITableViewCell {
 	buttonEdgeInsets: UIEdgeInsets;
 
 	cellSeparatorColor: UIColor;
+
+	iconImage: UIImage;
 
 	lineView: UIView;
 
@@ -206,6 +214,8 @@ declare class LCActionSheetConfig extends NSObject {
 	destructiveButtonColor: UIColor;
 
 	destructiveButtonIndexSet: NSIndexSet;
+
+	disableAutoDismissAfterClicking: boolean;
 
 	numberOfTitleLines: number;
 

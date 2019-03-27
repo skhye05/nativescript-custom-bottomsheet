@@ -1,6 +1,8 @@
 import { Observable } from 'tns-core-modules/data/observable';
 import { CustomBottomsheet } from 'nativescript-custom-bottomsheet';
 import { CBSheetOption } from '../../src/custom-bottomsheet.common';
+import { isAndroid } from 'tns-core-modules/ui/page/page';
+
 
 export class HelloWorldModel extends Observable {
   public message: string;
@@ -14,19 +16,20 @@ export class HelloWorldModel extends Observable {
 
   public onTap(): void {
 
+    isAndroid
     const options: CBSheetOption = {
-      icon: 'icon',
+      icon: isAndroid ? 'icon' : 'lock',
       title: 'Test',
       items: [{
-        icon: 'icon',
+        icon: isAndroid ? 'icon' : 'lock',
         title: 'test-list'
       },
       {
-        icon: 'icon',
+        icon: isAndroid ? 'icon' : 'lock',
         title: 'test-list'
       },
       {
-        icon: 'icon',
+        icon: isAndroid ? 'icon' : 'lock',
         title: 'test-list'
       }
       ],
