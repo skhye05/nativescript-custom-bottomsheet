@@ -1,13 +1,13 @@
 {
     "name": "nativescript-custom-bottomsheet",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Your awesome NativeScript plugin.",
     "main": "custom-bottomsheet",
     "typings": "index.d.ts",
     "nativescript": {
         "platforms": {
-            "android": "5.2.0",
-            "ios": "5.2.0"
+            "android": "5.1.0",
+            "ios": "5.1.0"
         }
     },
     "repository": {
