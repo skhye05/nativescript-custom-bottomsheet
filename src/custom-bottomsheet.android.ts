@@ -21,7 +21,7 @@ export class CustomBottomsheet {
         bottomSheetFragment.setOnItemClickListener(new com.eljo.skhye05.custombottomsheet.CustomBottomSheetFragment.OnItemClickListener({
             onClick: (position) => {
                 options.onItemTap(position, options.items[position]);
-                bottomSheetFragment.dismiss()
+                bottomSheetFragment.dismiss();
             }
         }));
 
