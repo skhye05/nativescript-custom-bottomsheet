@@ -16,10 +16,9 @@ export class HelloWorldModel extends Observable {
 
   public onTap(): void {
 
-    isAndroid
     const options: CBSheetOption = {
       icon: isAndroid ? 'icon' : 'lock',
-      title: 'Test',
+      title: 'Test hjhgdsg dshjgjgdhjh hdjgdsghghgjhsd hjhjhsdjv hjsdjhsdjhyure hjduyuysduyuyyusduuy',
       items: [{
         icon: isAndroid ? 'icon' : 'lock',
         title: 'test-list'

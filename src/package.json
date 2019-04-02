@@ -1,6 +1,6 @@
 {
     "name": "nativescript-custom-bottomsheet",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Your awesome NativeScript plugin.",
     "main": "custom-bottomsheet",
     "typings": "index.d.ts",
