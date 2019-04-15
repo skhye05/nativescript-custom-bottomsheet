@@ -15,7 +15,7 @@
         "url": "https://github.com/skhye05/nativescript-custom-bottomsheet.git"
     },
     "scripts": {
-        "tsc": "tsc",
+        "tsc": "tsc -skipLibCheck",
         "build": "npm run tsc && npm run build.native",
         "build.native": "node scripts/build-native.js",
         "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && npx rimraf -- package-lock.json && cd ../src",
