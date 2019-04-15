@@ -240,8 +240,19 @@ export default {
 |---------------|----------|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | icon          | `string` | Set Bottomsheet header icon                                              | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
 | title         | `string` |  Set Bottomsheet header title                                                  | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
-| items         | `Array<{icon:string; title:string}>`  |  Set Bottomsheet item's icon and title     | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
+| items         | `Array<CBSheetItem>`  |  Set Bottomsheet item's icon and title     | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
 | onItemTap     | `Callback Function`  | Call when an item is clicked and pass the index of the clicked item and it's properties `e.g. icon and title` | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
+
+
+### CBSheetItem
+
+#### Properties
+
+| Property      | Type     | Description                 | Platforms                                                                                                                                                        |
+|---------------|----------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| icon          | `string` | Set Bottomsheet item icon   | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
+| title         | `string` |  Set Bottomsheet item title | ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-16.png)  ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-16.png) |
+
 
 ## Limitations
 
