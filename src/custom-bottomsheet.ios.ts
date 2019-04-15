@@ -26,6 +26,11 @@ export class CustomBottomsheet {
             icons,
             options.cancelButtonText || 'Cancel',
             (actionSheet: LCActionSheet, index: number) => {
+                if (index === 0) {
+                    options.onItemTap(-1, null);
+                    return;
+                }
+
                 options.onItemTap(index - 1, options.items[index - 1]);
             },
             titles

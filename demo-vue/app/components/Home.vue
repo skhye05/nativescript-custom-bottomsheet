@@ -52,7 +52,9 @@ export default {
         ],
         onItemTap: (index, item) => {
           console.log("index", index);
-          alert(`Action Selected : "${item.title}"`);
+          if (item) {
+            alert(`Action Selected : "${item.title}"`);
+          }
         },
         cancelButtonText: "Cancel"
       };

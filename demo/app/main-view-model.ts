@@ -37,7 +37,9 @@ export class HelloWorldModel extends Observable {
       ],
       onItemTap: (index, item) => {
         console.log('index', index);
-        alert(`Action Selected : "${item.title}"`);
+        if (item) {
+          alert(`Action Selected : "${item.title}"`);
+        }
       },
       cancelButtonText: 'Cancel'
     };

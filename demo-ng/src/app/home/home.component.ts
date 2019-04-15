@@ -48,7 +48,9 @@ export class HomeComponent implements OnInit {
             onItemTap: (index, item) => {
                 this.zone.run(() => {
                     console.log('index', index);
-                    alert(`Action Selected => "${item.title}`);
+                    if (item) {
+                        alert(`Action Selected => "${item.title}"`);
+                    }
                 })
             },
             cancelButtonText: 'Cancel'
