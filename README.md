@@ -255,8 +255,7 @@ Jonathan Mayunga, mayunga.j@gmail.com
 
 ## Credits
 
-- For Android we're using the [Bubble Navigation by Gaurav Kumar](https://github.com/gauravk95/custom-bottomsheet),
-- For iOS [BubbleTabBar by Cuberto](https://github.com/Cuberto/bubble-icon-tabbar).
+- For iOS [LCActionSheet by Leo iTofu](https://github.com/iTofu/LCActionSheet).
     
 ## License
 
