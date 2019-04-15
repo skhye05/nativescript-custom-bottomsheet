@@ -49,7 +49,8 @@ matrix:
       node_js: "8"
       jdk: oraclejdk8
       script: 
-        - cd src && npm run build
+        - cd src && npm run build && npm pack
+        - cd ../demo-vue && tns plugin add ../src/*.tgz
         - cd ../demo-vue && npm i && tns build ios --bundle --env.uglify
     - language: android
       os: linux
@@ -69,9 +70,8 @@ matrix:
       jdk: oraclejdk8
       before_install: nvm install 8
       script: 
-        - cd src && npm run build
-        - cd ../publish && sh pack.sh
-        - cd ../demo-ng && tns plugin add ../publish/package/*.tgz
+        - cd src && npm run build && npm pack
+        - cd ../demo-vue && tns plugin add ../src/*.tgz
         - npm i && tns build android --bundle --env.uglify --env.aot --env.snapshot
     - language: android
       os: linux
@@ -81,7 +81,8 @@ matrix:
       jdk: oraclejdk8
       before_install: nvm install 8
       script:
-        - cd src && npm run build
+        - cd src && npm run build && npm pack
+        - cd ../demo-vue && tns plugin add ../src/*.tgz
         - cd ../demo-vue && npm i && tns build android --bundle --env.uglify
     - stage: "Build"
       os: osx

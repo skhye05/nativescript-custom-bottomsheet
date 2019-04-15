@@ -24,9 +24,9 @@ export class CustomBottomsheet {
             options.title,
             UIImage.imageNamed(options.icon),
             icons,
-            'Cancel',
+            options.cancelButtonText || 'Cancel',
             (actionSheet: LCActionSheet, index: number) => {
-                options.onItemTap(index - 1, options.items[index]);
+                options.onItemTap(index - 1, options.items[index - 1]);
             },
             titles
         );
@@ -64,7 +64,3 @@ export class CustomBottomsheet {
 //     }
 // }
 
-const rootVC = function () {
-    let appwindow = UIApplication.sharedApplication.keyWindow;
-    return appwindow.rootViewController;
-};

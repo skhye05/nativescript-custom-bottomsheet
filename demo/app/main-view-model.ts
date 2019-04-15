@@ -1,5 +1,6 @@
 import { Observable } from 'tns-core-modules/data/observable';
 import { CustomBottomsheet, CBSheetOption } from 'nativescript-custom-bottomsheet';
+import { alert } from "tns-core-modules/ui/dialogs";
 
 export class HelloWorldModel extends Observable {
   private customBottomsheet: CustomBottomsheet;
@@ -36,7 +37,9 @@ export class HelloWorldModel extends Observable {
       ],
       onItemTap: (index, item) => {
         console.log('index', index);
-      }
+        alert(`Action Selected : "${item.title}"`);
+      },
+      cancelButtonText: 'Cancel'
     };
 
     this.customBottomsheet.show(options);

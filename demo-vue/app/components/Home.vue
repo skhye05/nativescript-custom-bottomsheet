@@ -18,6 +18,8 @@ import {
   CBSheetOption
 } from "nativescript-custom-bottomsheet";
 
+import { alert } from "tns-core-modules/ui/dialogs";
+
 const customBottomsheet = new CustomBottomsheet();
 
 export default {
@@ -50,7 +52,9 @@ export default {
         ],
         onItemTap: (index, item) => {
           console.log("index", index);
-        }
+          alert(`Action Selected : "${item.title}"`);
+        },
+        cancelButtonText: "Cancel"
       };
 
       this.customBottomsheet.show(options);

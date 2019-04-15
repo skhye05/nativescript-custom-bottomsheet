@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
-import { CustomBottomsheet, CBSheetOption } from 'nativescript-custom-bottomsheet';
+import { Component, OnInit, NgZone } from "@angular/core";
+import { CustomBottomsheet, CBSheetOption, CBSheetItem } from 'nativescript-custom-bottomsheet';
+import { alert } from "tns-core-modules/ui/dialogs";
 
 @Component({
     selector: "Home",
@@ -9,44 +10,50 @@ import { CustomBottomsheet, CBSheetOption } from 'nativescript-custom-bottomshee
 export class HomeComponent implements OnInit {
     private customBottomsheet: CustomBottomsheet;
 
-    constructor() {
+    constructor(private zone: NgZone) {
         // Use the component constructor to inject providers.
         this.customBottomsheet = new CustomBottomsheet();
     }
 
     ngOnInit(): void {
         // Init your component properties here.
-    } 
-    
+    }
+
     public onTap(): void {
         const options: CBSheetOption = {
             icon: 'contact',
             title: 'John Doe',
-            items: [{
-                icon: 'call',
-                title: 'Make a call'
-            },
-            {
-                icon: 'sms',
-                title: 'Send a text message'
-            },
-            {
-                icon: 'email',
-                title: 'Send an email'
-            },
-            {
-                icon: 'comments',
-                title: 'Leave a comment'
-            },
-            {
-                icon: 'delete',
-                title: 'Delete contact'
-            }
+            items: [
+                {
+                    icon: 'call',
+                    title: 'Make a call'
+                },
+                {
+                    icon: 'sms',
+                    title: 'Send a text message'
+                },
+                {
+                    icon: 'email',
+                    title: 'Send an email'
+                },
+                {
+                    icon: 'comments',
+                    title: 'Leave a comment'
+                },
+                {
+                    icon: 'delete',
+                    title: 'Delete contact'
+                }
             ],
             onItemTap: (index, item) => {
-                console.log('index', index);
-            }
+                this.zone.run(() => {
+                    console.log('index', index);
+                    alert(`Action Selected => "${item.title}`);
+                })
+            },
+            cancelButtonText: 'Cancel'
         };
+
 
         this.customBottomsheet.show(options);
     }

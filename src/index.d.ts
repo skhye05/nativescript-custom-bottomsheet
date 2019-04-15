@@ -11,6 +11,7 @@ export interface CBSheetOption {
   icon: string;
   items: Array<any>;
   onItemTap?: (index: any, item: CBSheetItem) => void;
+  cancelButtonText?: string;
 }
 export interface CBSheetItem {
   title: string;
