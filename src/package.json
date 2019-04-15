@@ -36,7 +36,10 @@
         "JavaScript",
         "Android",
         "iOS",
-        "Bottom Sheet"
+        "Bottom Sheet",
+        "ActionSheet",
+        "Bottom Action Sheet",
+        "BottomSheet"
     ],
     "author": {
         "name": "Jonathan Mayunga",
