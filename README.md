@@ -9,7 +9,7 @@
 
 ## Overview
 
- Nativescript Custom Bottomsheet is a plugin that enable the show a custom beautiful actionsheet/bottomsheet with.
+ Nativescript Custom Bottomsheet is a plugin that enable the show a custom beautiful actionsheet/bottomsheet.
 
  <p>
   <img src="https://raw.githubusercontent.com/skhye05/NativeScript-Custom-Bottomsheet/master/ios.gif"  width="300"/>

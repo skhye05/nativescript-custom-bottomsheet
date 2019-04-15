@@ -1,7 +1,7 @@
 {
     "name": "nativescript-custom-bottomsheet",
     "version": "1.0.6",
-    "description": "Your awesome NativeScript plugin.",
+    "description": "Nativescript Custom Bottomsheet is a plugin that enable the show a custom beautiful actionsheet/bottomsheet.",
     "main": "custom-bottomsheet",
     "typings": "index.d.ts",
     "nativescript": {
