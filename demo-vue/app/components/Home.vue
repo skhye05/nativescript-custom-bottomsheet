@@ -59,7 +59,7 @@ export default {
         cancelButtonText: "Cancel"
       };
 
-      this.customBottomsheet.show(options);
+      customBottomsheet.show(options);
     }
   }
 };
