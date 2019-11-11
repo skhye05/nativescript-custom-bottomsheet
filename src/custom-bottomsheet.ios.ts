@@ -27,7 +27,7 @@ export class CustomBottomsheet {
             options.cancelButtonText || 'Cancel',
             (actionSheet: LCActionSheet, index: number) => {
                 if (index === 0) {
-                    options.onItemTap(-1, null);
+                    //options.onItemTap(-1, null);
                     return;
                 }
 
