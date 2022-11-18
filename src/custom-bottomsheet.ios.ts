@@ -1,4 +1,4 @@
-/// <reference path="./typings/cbs.android.d.ts" />
+/// <reference path="./typings/cbs.ios.d.ts" />
 import { CBSheetOption } from "./custom-bottomsheet.common";
 
 // UIImage.imageNamed(options.icon)
