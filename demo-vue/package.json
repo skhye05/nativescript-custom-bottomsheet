@@ -1,37 +1,27 @@
 {
-  "nativescript": {
-    "id": "org.nativescript.demovue",
-    "tns-android": {
-      "version": "5.3.1"
-    },
-    "tns-ios": {
-      "version": "5.3.1"
-    }
-  },
   "description": "NativeScript Application",
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "dependencies": {
-    "nativescript-theme-core": "~1.0.4",
-    "nativescript-vue": "~2.2.0",
-    "tns-core-modules": "~5.3.0"
+    "@nativescript/theme": "~3.0.2",
+    "nativescript-vue": "~2.9.1",
+    "@nativescript/core": "~8.3.0",
+    "nativescript-custom-bottomsheet": "../src"
   },
   "devDependencies": {
-    "@babel/core": "~7.1.0",
-    "@babel/preset-env": "~7.1.0",
+    "@nativescript/android": "8.3.1",
+    "@nativescript/webpack": "~5.0.0",
     "@types/chai": "~4.1.7",
     "@types/mocha": "~5.2.5",
     "@types/node": "~10.12.18",
-    "babel-loader": "~8.0.0",
     "mocha": "~5.2.0",
     "mocha-junit-reporter": "~1.18.0",
     "mocha-multi": "~1.0.1",
     "nativescript-dev-appium": "^5.2.0",
-    "nativescript-dev-webpack": "~0.21.0",
-    "nativescript-vue-template-compiler": "~2.2.0",
-    "node-sass": "~4.11.0",
+    "nativescript-vue-template-compiler": "~2.9.1",
+    "sass": "~1.49.9",
     "tslint": "^5.12.1",
-    "vue-loader": "~15.4.0"
+    "typescript": "~4.7.0"
   },
   "gitHead": "803cec054c44c99eaa59cdc267993e6346f6cb3a",
   "readme": "NativeScript Application",
@@ -41,5 +31,6 @@
     "ci.android.build": "npm run build.plugin && tns build android",
     "ci.ios.build": "npm run build.plugin && tns build ios",
     "e2e": "node ./node_modules/nativescript-dev-appium/check-dev-deps.js &&  mocha --opts ./e2e/config/mocha.opts "
-  }
+  },
+  "main": "./app/app.js"
 }
