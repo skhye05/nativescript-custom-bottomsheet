@@ -68,9 +68,9 @@
     "homepage": "https://github.com/skhye05/nativescript-custom-bottomsheet",
     "readmeFilename": "README.md",
     "devDependencies": {
-        "tns-core-modules": "^5.2.0",
-        "tns-platform-declarations": "^5.2.0",
-        "typescript": "~3.3.3",
+        "@nativescript/core": "~8.3.0",
+        "@nativescript/types": "~8.3.0",
+        "typescript": "~4.7.0",
         "prompt": "^1.0.0",
         "rimraf": "^2.6.3",
         "tslint": "^5.12.1",

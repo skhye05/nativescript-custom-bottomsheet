@@ -1,6 +1,6 @@
 import { Component, OnInit, NgZone } from "@angular/core";
 import { CustomBottomsheet, CBSheetOption, CBSheetItem } from 'nativescript-custom-bottomsheet';
-import { alert } from "tns-core-modules/ui/dialogs";
+import { Dialogs } from '@nativescript/core';
 
 @Component({
     selector: "Home",
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
                 this.zone.run(() => {
                     console.log('index', index);
                     if (item) {
-                        alert(`Action Selected => "${item.title}"`);
+                        Dialogs.alert(`Action Selected => "${item.title}"`);
                     }
                 })
             },

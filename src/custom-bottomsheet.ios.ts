@@ -1,7 +1,5 @@
-/// <reference path="./typings/cbs.android.d.ts" />
+/// <reference path="./typings/cbs.ios.d.ts" />
 import { CBSheetOption } from "./custom-bottomsheet.common";
-import * as app from 'tns-core-modules/application';
-import * as utils from 'tns-core-modules/utils/utils';
 
 // UIImage.imageNamed(options.icon)
 export class CustomBottomsheet {
